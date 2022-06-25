@@ -1,5 +1,14 @@
-h1{
+#welcome{
+  border: 3px solid black;
   font-family: 'Times New Roman';
   font-weight: heavy;
-  color: red;
+}
+
+#video{
+  height:720px;
+  width:1280px;
+}
+
+#welcome:hover{
+  color: blue;
 }
