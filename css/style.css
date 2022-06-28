@@ -1,12 +1,18 @@
 #welcome{
   border: 3px solid black;
   font-family: 'Times New Roman';
-  font-weight: heavy;
+  text-align: center;
 }
 
-#video{
-  height:720px;
-  width:1280px;
+.vid-container{
+  
+}
+  
+
+.vid-container video{
+  max-width: 100%
+  height: auto;
+  display: block;
 }
 
 #welcome:hover{
