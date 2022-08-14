@@ -18,7 +18,7 @@
       <div>
           <button id="btn" type="button" onClick="growPlant()">Click me to grow a plant!</button>
           <p>
-              Your Plant has been watered <span id="display>0</span> times. 
+              Your Plant has been watered <span id="display">0</span> times. 
           </p>
           <h2 id="myPlant"> ______ </h2>
           
@@ -27,13 +27,14 @@
           <script type="text/javascript">
             var count = 0;
             var btn = document.getElementById("btn");
-            var disp = document.getElementById("display");       
+            const myPlant = [ "______", 2, 3, 4,];    
             btn.onclick = function () {
               count++;
-              disp.innerHTML = count;
+              document.getElementById("display").innerHTML = count;
               document.getElementById("myPlant").innerHTML = myPlant[Math.floor(count / 10)]
             }
-            const myPlant = [ "______", 2, 3, 4,];
+          
+            
             
           </script>
       </div>
