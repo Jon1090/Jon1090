@@ -15,20 +15,28 @@
             <h4>This website is currently in use to practice HTML and CSS.</h4>
         </section>
     </main>
-      <div class='vid-container'>
-        <div class="video">
-          <iframe width="1280" height="720" src="https://www.youtube.com/embed/GmDa_81TAXs" title="Jerma Gets Heated Over Chili Time (A Jerma Moment)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+      <div>
+          <button id="btn" type="button" onClick="growPlant()">Click me to grow a plant!</button>
+          <p>
+              Your Plant has been watered <span id="display>0</span> times. 
+          </p>
+          <h2 id="myPlant"> ______ </h2>
+          
+          
+        
+          <script type="text/javascript">
+            var count = 0;
+            var btn = document.getElementById("btn");
+            var disp = document.getElementById("display");       
+            btn.onclick = function () {
+              count++;
+              disp.innerHTML = count;
+              document.getElementById("myPlant").innerHTML = myPlant[Math.floor(count / 10)]
+            }
+            const myPlant = [ "______", 2, 3, 4,];
+            
+          </script>
       </div>
-    <form>
-        <label for="Rating">Rate this video!</label>
-        <select id="Rating" name="Rating">
-            <option value="Great">Great</option>
-            <option value="Super">Super</option>
-            <option value="-2">-2</option>
-            <option value="2">2</option>
-        </select>
-    </form>
 </body>
 </html>
 
