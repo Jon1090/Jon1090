@@ -20,9 +20,9 @@
           <p>
               Your Plant has been watered <span id="display">0</span> times. 
           </p>
-          <div id ="flower">"       "</div>
-          <div id ="stem2">"       "</div>
-          <div id ="stem">"       "</div>
+          <div id ="flower"></div>
+          <div id ="stem2"></div>
+          <div id ="stem"></div>
           <div id="myPlant"> ______ </div>
           
           
@@ -39,14 +39,14 @@
               count++;
               document.getElementById("display").innerHTML = count;
               document.getElementById("myPlant").innerHTML = myPlant[Math.floor(count / 10)] 
-              if (count >= 20 && count < 50) {
+              if (count > 19 && count < 50) {
                   document.getElementById("stem").innerHTML = stem;
               }
-              if (count >= 30 && count < 50) {
+              if (count > 29 && count < 50) {
                    document.getElementById("stem2").innerHTML = stem2;
-              if (count >= 40 && count < 50) {
+              if (count > 39 && count < 50) {
                    document.getElementById("flower").innerHTML = flower;
-              if (count > 50) {
+              if (count > 49) {
                   document.getElementById("myPlant").innerHTML = myPlant[4]
               }
                 
