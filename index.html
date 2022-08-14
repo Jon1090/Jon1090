@@ -20,19 +20,37 @@
           <p>
               Your Plant has been watered <span id="display">0</span> times. 
           </p>
-          <h2 id="myPlant"> ______ </h2>
+          <div id ="flower">"       "</div>
+          <div id ="stem2">"       "</div>
+          <div id ="stem">"       "</div>
+          <div id="myPlant"> ______ </div>
           
           
         
           <script type="text/javascript">
             var count = 0;
             var btn = document.getElementById("btn");
-            const myPlant = [ "______", "___|___", 3 , 4,];    
+            const myPlant = [ "______", "___|___", "___|___" , "___|___", "``'-.,_,.-'``'-.,_,.='``'-.,_,.-'``'-.,_,.='``"]; 
+            const stem = "   |   ";
+            const stem2 = "  \|/  ";
+            const flower = "   O   ";
+              
             btn.onclick = function () {
               count++;
               document.getElementById("display").innerHTML = count;
-              document.getElementById("myPlant").innerHTML = myPlant[Math.floor(count / 10)]
-            }
+              document.getElementById("myPlant").innerHTML = myPlant[Math.floor(count / 10)] 
+              if (count >= 20 && count < 50) {
+                  document.getElementById("stem").innerHTML = stem;
+              }
+              if (count >= 30 && count < 50) {
+                   document.getElementById("stem2").innerHTML = stem2;
+              if (count >= 40 && count < 50) {
+                   document.getElementById("flower").innerHTML = flower;
+              if (count > 50) {
+                  document.getElementById("myPlant").innerHTML = myPlant[4]
+              }
+                
+            
           
             
             
