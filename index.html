@@ -1,60 +1,23 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Jon's Website</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Jon1090.js"></script>
+    <link rel="stylesheet" href="Jon1090.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <div id="welcome">
-      <h1>Welcome to my site!</h1>
+    <div class="menu">
+        <button onclick="newTask()">New Task</button>
     </div>
-    <main>
-        <section>
-            <h4>This website is currently in use to practice HTML and CSS.</h4>
-        </section>
-    </main>
-      <div>
-          <button id="btn" type="button" onClick="growPlant()">Click me to grow a plant!</button>
-          <p>
-              Your Plant has been watered <span id="display">0</span> times. 
-          </p>
-          
-          <pre id="myPlant"> ______ </pre>         
-         
-          <script>                       
-            btn.onclick = function growPlant() {
-              count++;
-              document.getElementById("display").innerHTML = count;
-              
-              if (count > 10 && count < 20) {
-                    document.getElementById("myPlant").innerHTML = "
-                                                                   ___|___";
-              }
-              if (count > 20 && count < 30) {
-                    document.getElementById("myPlant").innerHTML = "  
-                                                                       |   
-                                                                    ___|___";
-              }
-              if (count > 30 && count < 40) {
-                    document.getElementById("myPlant").innerHTML = "   
-                                                                      \|/
-                                                                       |   
-                                                                    ___|___";
-              }
-              if (count > 40) {
-                    document.getElementById("myPlant").innerHTML = "   
-                                                                       O
-                                                                      \|/
-                                                                       |   
-                                                                    ___|___";
-              }
-            }
-         
-          </script>
-      </div>
+    <div class="pendingProject">
+        <p>My pending projects</p>
+    </div>
+    <div class="projectList">
+        <p>My Projects</p>
+    </div>
+    
 </body>
 </html>
-
-

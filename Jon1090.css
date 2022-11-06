@@ -1,0 +1,32 @@
+.projectList {
+    display: flex;
+    flex-direction: column;
+}
+
+.subTaskContainer {
+    display: flex;
+}
+
+[class^='task'] {
+    margin: 10px 15px;
+}
+
+.subTask {
+    position: relative;
+    margin: 10px 20px;
+    border-bottom: solid
+}
+
+button {
+    margin: 5px;
+}
+
+.subTask button {
+    float: right;
+    margin: 0 30% 5px 0;
+    
+}
+
+.subTask {
+    overflow: auto;
+}
