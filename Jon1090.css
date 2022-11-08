@@ -30,3 +30,7 @@ button {
 .subTask {
     overflow: auto;
 }
+
+.hide {
+    display: none;
+}

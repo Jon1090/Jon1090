@@ -9,7 +9,7 @@ be able to create task in project with:
     priority
     notes
     checklist
-    
+
     */
     let taskClassList = [];
     let taskCounter = 1;
@@ -52,16 +52,19 @@ be able to create task in project with:
     
     //add sub tasks to tasks that can be expanded and minimized. 
     //ability to edit tasks
+    //add button to expand or collapse tasks (hide and display subtasks)
     function publishTask() {
         let newTask = document.createElement("div");
-        newTask.innerText = "Due Date: " + document.getElementById("taskDate").value + " " + document.getElementById("projectName").value;
+        if (document.getElementById("taskDate").value) {
+            newTask.innerText = "Due Date: " + document.getElementById("taskDate").value + " Task: " + document.getElementById("projectName").value;
+        } else {
+            newTask.innerText = "Task: " + document.getElementById("projectName").value;
+        }
         taskClassList.push("task" + taskCounter);
         taskCounter++;
         let newTaskClass = taskClassList[(taskClassList.length - 1)]
         newTask.setAttribute("class", newTaskClass);
         document.querySelector(".projectList").appendChild(newTask);
-    
-    
     
         let completedButton = document.createElement("button");
         completedButton.addEventListener("click", function () {
@@ -84,8 +87,19 @@ be able to create task in project with:
             newSubTask(newTaskClass);
         });
         newSubTaskButton.innerText = "Add a sub task";
+    
+        let hideSubTasksButton = document.createElement("button");
+        hideSubTasksButton.addEventListener("click", function () {
+            //function to hide subtasks here
+            let nodeList = this.parentElement.querySelectorAll(".subTask");
+            nodeList.forEach(element => element.classList.toggle("hide"));
+        });
+        hideSubTasksButton.innerText = "Toggle subtasks display";
+    
+    
         document.querySelector("." + newTaskClass).appendChild(clearButton);
         document.querySelector("." + newTaskClass).append(newSubTaskButton);
+        document.querySelector("." + newTaskClass).append(hideSubTasksButton);
         document.querySelector(".taskContainer").remove();
     
         
@@ -96,7 +110,6 @@ be able to create task in project with:
         let subTaskContainer = document.createElement("div");
         subTaskContainer.innerText = "Sub Task:";
         subTaskContainer.setAttribute("class", "subTaskContainer");
-    
         let subTaskNameBox = document.createElement("input");
         subTaskNameBox.setAttribute("type", "text");
         subTaskNameBox.setAttribute("id", "subTaskName");
